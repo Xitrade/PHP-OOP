@@ -11,9 +11,14 @@
 		//class body
 	}
 
-	$house = new house();
-	$roof = new roof();
-	$door = new door();
+	$house1 = new house();
+	$house2 = new house();
+
+	$roof1 = new roof();
+	$roof2 = new roof();
+
+	$door1 = new door();
+	$door2 = new door();
 
 
 	class game{
