@@ -27,4 +27,14 @@
 
 //EXAMPLE 3
 
+	$test_var = "trigger";
+	$checking = is_array($test_var);
+	echo $checking?"It's an array":"It's not an array";
+
+	echo "<br>";
+
+	$test_array = array("php","is_array","function");
+	$checking = is_array($test_array);
+	echo $checking?"It's an array":"It's not an array";
+
 ?>
