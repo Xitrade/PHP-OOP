@@ -53,14 +53,14 @@ print "Animal 1 is a " . $Cat->getName();
 	public function Product() {} 
 	
 	protected function setName($name) { $this->name = $name; } 
-	        public function GetName() { return $this->name; } 
+	  	public function GetName() { return $this->name; } 
 	           
-	        protected function setPrice($price = '0.00') { $this->price = $price; } 
-	        public function GetPrice() { return $this->price; } 
-	             
-	        protected function setPhoto($photo) { $this->photo = $photo; } 
-            public function GetPhoto() { return $this->photo; } 
-	             
-	        protected function setDescription($description) { $this->description = $description; } 
-	        public function GetDescription() { return $this->description; } 
+	    protected function setPrice($price = '0.00') { $this->price = $price; } 
+	    public function GetPrice() { return $this->price; } 
+             
+	    protected function setPhoto($photo) { $this->photo = $photo; } 
+        public function GetPhoto() { return $this->photo; } 
+				             
+	    protected function setDescription($description) { $this->description = $description; } 
+	    public function GetDescription() { return $this->description; } 
 ?>
