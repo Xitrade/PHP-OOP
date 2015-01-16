@@ -1,51 +1,46 @@
 <?php
-class Animal {
+class Animal{
 	public $firstName;
 	public $lastName;
 	public $scientificName;
 	public $gender;
 	public $weight;
 
-	function __construct($scientificName, $lastName, $gender, $weight, $bark, $meow){
+	function __construct($scientificName, $firstName, $lastName, $gender, $weight){
 		$this->scientificName = $scientificName;
 		$this->firstName = $firstName;
 		$this->lastName = $lastName;
 		$this->gender = $gender;
 		$this->weight = $weight;
+	}
+	function getName(){
+		return "This is my " . $this->firstName . 
+		"and last " . $this->lastName . "and this is my scientific-name " . $this->scientificName . ".";
 		
 	}
-
-
-	function getName(){
-	return "This is my " . $this->firstName . "and last ". $this->lastName;
-
-
-	}
-
 }
-class Cat extends Animal{
+class Cat extends Animal {
 	function __construct($scientificName, $firstName, $lastName, $gender, $weight, $meow){
-			parent::__construct($scientificName, $firstName, $lastName, $gender, $weight, $meow);
-			$this->meow = $meow;
+		parent::__construct($scientificName, $firstName,$lastName, $gender, $weight);
+	$this->meow = $meow;	
 	}
 	function greet(){
-	return $this->meow;	
+	return $this->meow;
 	}
 }
 
-class Dog extends Animal {
-	function __construct($scientificName, $firstName, $lastName, $gender, $weight, $bark){
-		parent::__construct($scientificName, $firstName, $lastName, $gender, $weight, $bark);
-		$this->bark = $bark;
-	}
+class Dog extends Animal{
+	function __construct($scientificName, $firstName,$lastName, $gender, $weight, $bark)
+
+		parent::__construct($scientificName, $firstName,$lastName, $gender, $weight)
+	
 	function hello(){
-	return $this->bark;
+		return $this->bark;
 	}
 }
 
-$cat = new Cat("Cat", "Mellow", "Yellow", "male", 15);
-print "Animal 1 is a " . $Cat->getName();
-
+$cat = new Cat("Cat", "Yellow", "male", 15, true);
+print "Animal 1 is a " . $cat->getName();
 //Example 2
 
 class house {
@@ -72,17 +67,17 @@ class house {
 	}
 
 }
-class SpanishColonial extends house{
+class ad extends house{
 	function __construct($style, $floors, $bath, $price, $flooring, $vendor){
 			parent::__construct($style, $floors, $bath, $price, $flooring, $vendor);
 			$this->arkham = $vendor;
 	}
-	function ad1(){
+	function house(){
 	return $this->arkham;	
 	}
 }
 
-$house = new ad1("twoFloors", "threeBath", "Yellow", "twentyThousand", 15);
+$house = new ad("twoFloors", "threeBath", "Yellow", "twentyThousand", 15);
 print "This home is a " . $SpanishColonial->house();
 
 //Example 3
